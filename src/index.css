@@ -31,6 +31,7 @@ body{
     transition: all 0.3s ease 0s;
     position: fixed;
     right: 40px;
+    z-index: 100;
 
 }
 .nav-toggle-btn:hover {
@@ -51,12 +52,13 @@ body{
 .nav-items-container {
     width: 250px;
     height: 100vh;
+    background-color: var(--globla-dark);
     position: fixed;
-    transform: translateX(100%);
     right: -100%;
     top: 0%;
-    background-color: var(--globla-dark);
+    transform: translateX(100%);
     transition: all 1s ease 0s;
+    z-index: 101;
     
 }
 .nav-items-container.active {
@@ -180,3 +182,198 @@ body{
     font-size: 20px;
     color: var(--globla-dark);
 }
+
+/* Start what we do section */
+.wedoicons {
+    font-size: 50px;
+    padding: 20px;
+}
+.works-main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+}
+.work-img-container {
+    position: relative;
+    align-self: flex-start;
+    
+}
+.work-img-overlayer {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0);
+
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+}
+.img-link {
+    text-decoration: none;
+    position: absolute;
+    top: -100px;
+    transition: all 0.3s linear 0s;
+}
+.link-roap {
+    width: 2px;
+    height: 50px;
+    background-color: var(--global-white);
+}
+.img-link .link-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--global-white);
+    font-size: 25px;
+    border: 2px solid var(--global-white);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.img-plus-icon {
+    color: var(--global-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+
+}
+.img-plus-icon span i {
+    transform: scale(0);
+    transition: all 0.3s linear 0s;
+}
+.overlayer-content {
+    transform: translateY(100px);
+    transition: all 0.3s linear 0s;
+}
+.overlayer-content h4{
+    color: var(--global-white);
+}
+.overlayer-content h5{
+    color: var(--primary-global-color);
+}
+.work-img-container:hover .work-img-overlayer{
+    background-color: rgba(0,0,0,0.6);
+}
+.work-img-container:hover .work-img-overlayer .img-link{
+    top: 0px;
+}
+.work-img-container:hover .work-img-overlayer .img-plus-icon span i{
+    transform: scale(1);
+}
+.work-img-container:hover .work-img-overlayer .overlayer-content{
+    transform: translateY(0px);
+}
+/* End what we do section */
+
+/* Our client section start */
+.ourclients-section {
+    background-color:#e6e6e6;
+}
+/* Our client section end */
+
+/* Start Content Us section */
+.contactus-section {
+    background-image: url("https://preview.colorlib.com/theme/glint/images/contact-bg.jpg.webp");
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+.form-container {
+    background-color: rgba(0,0,0,0.4);
+}
+.form-container h6 {
+    color: var(--global-white);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.contact-form .form-group .form-control {
+    padding: 15px 20px;
+    background-color: transparent !important;
+    color: var(--global-white);
+    border: none;
+    border-bottom: 2px solid var(--global-gray-color);
+    border-radius: 0px;
+}
+.contact-form .form-group .form-control:focus {
+    box-shadow: none;
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--primary-global-color);
+}
+.contact-form .form-group .form-control::placeholder {
+    color: var(--global-gray-color);
+}
+.contact-form .form-group textarea {
+    height: 150px;
+}
+.contact-form .d-grid .btn {
+    padding: 15px 20px;
+    letter-spacing: 2px;
+    color: var(--global-white);
+    background-color: var(--primary-global-color);
+    border-radius: 0px;
+}
+.contact-form .d-grid .btn:hover{
+    opacity: 0.8;
+}
+.content-info-item p {
+    color: var(--global-gray-color);
+}
+.content-info-item .email-links {
+    color: var(--global-gray-color);
+    text-decoration: none;
+    display: block;
+}
+.content-info-item .contact-links {
+    margin-right: 20px;
+    color: var(--global-white);
+    text-decoration: none;
+    font-size: 20px;
+
+
+}
+/* End Contetn Us Section */
+
+/* Start Footer Section */
+.footer-section {
+    padding: 100px 0px;
+    background: #111111;
+}
+.footer-section p {
+    color: var(--global-gray-color);
+}
+.footer-section h6 {
+    color: var(--global-white);
+}
+.email-input {
+    width: 70%;
+    
+}
+.email-input input {
+    padding: 15px 20px;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border: 1px solid var(--global-gray-color);
+}
+.email-input input:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+.btn-input {
+    width: 30%;
+    
+}
+.btn-input input {
+    color: var(--global-white);
+    background-color: var(--primary-global-color);
+    font-weight: 500;
+    border-radius: 0;
+    border: 1px solid var(--global-gray-color);
+}
+.btn-input input:hover {
+    color: var(--global-white);
+    background-color: var(--primary-global-color); 
+}
+/* End footer Section */
